@@ -15,11 +15,12 @@
  **/
 
 import Foundation
-
 import Kitura
 
-private typealias AllowRemoteMiddlware = RouterMiddleware
-public class AllowRemoteOrigin: AllowRemoteMiddlware {
+public class AllowRemoteOrigin: RouterMiddleware {
+    
+    public init () {}
+    
     public func handle(request: RouterRequest, response: RouterResponse, next: () -> Void) {
 
         // enable cors
