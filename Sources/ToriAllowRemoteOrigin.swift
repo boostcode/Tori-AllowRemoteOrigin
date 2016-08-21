@@ -19,8 +19,8 @@ import Foundation
 import Kitura
 
 private typealias AllowRemoteMiddlware = RouterMiddleware
-class AllowRemoteOrigin: AllowRemoteMiddlware {
-    func handle(request: RouterRequest, response: RouterResponse, next: () -> Void) {
+public class AllowRemoteOrigin: AllowRemoteMiddlware {
+    public func handle(request: RouterRequest, response: RouterResponse, next: () -> Void) {
 
         // enable cors
         response.headers.append("Access-Control-Allow-Origin", value: "*")
