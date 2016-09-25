@@ -21,7 +21,7 @@ public class AllowRemoteOrigin: RouterMiddleware {
     
     public init () {}
     
-    public func handle(request: RouterRequest, response: RouterResponse, next: () -> Void) {
+    public func handle(request: RouterRequest, response: RouterResponse, next: @escaping () -> Void) {
 
         // enable cors
         response.headers.append("Access-Control-Allow-Origin", value: "*")
